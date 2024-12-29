@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rent a Book</title>
+    <link rel="stylesheet" href="/css/rent-book-styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rent a Book</h1>
+
+      <!-- Book Details -->
+      <div class="book-details">
+        <!-- Loop through the image URLs to display them -->
+        <div class="image-gallery">
+          <% book.images.forEach((image, index) => { %>
+          <img
+            src="<%= image.imagePath %>"
+            alt="<%= book.bookName %> - Image <%= index + 1 %>"
+            class="book-image"
+          />
+          <% }); %>
+        </div>
+
+        <!-- Book details -->
+        <h2><%= book.bookName %></h2>
+        <p class="book-description"><%= book.description %></p>
+      </div>
+
+      <!-- Reviews Section -->
+      <div class="reviews-section">
+        <h3>Reviews</h3>
+        <ul class="review-list">
+          <% book.reviews.forEach(function(review) { %>
+          <li class="review-item">
+            <p class="review-text"><%= review.review %></p>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+
+      <!-- Rental Form -->
+      <div class="rental-section">
+        <h3>Rent This Book</h3>
+        <form action="/books/<%= book.id %>/rent" method="POST">
+          <input type="hidden" name="bookId" value="<%= book.id %>" />
+
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate" name="startDate" required />
+          <label for="endDate">End Date:</label>
+          <input type="date" id="endDate" name="endDate" required />
+          
+          <!-- Show error message if showError is true -->
+          <% if (showError) { %>
+          <p class="error-message" style="color: red;">
+            Selected dates overlap with an existing reservation.
+          </p>
+          <% } %>
+
+          <button type="submit">Rent Book</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Reviews</title>
+  <link rel="stylesheet" href="/styles/myreviews-styles.css">
+</head>
+<body>
+  <div class="reviews-container">
+    <h1>Book Reviews</h1>
+    <ul class="review-list">
+      <% reviews.forEach(function(reviewItem) { %>
+        <li class="review-item">
+          <h2 class="book-title"><%= reviewItem.book.bookName %></h2>
+          <p class="review-text"><%= reviewItem.review %></p>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>

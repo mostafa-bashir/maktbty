@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Books</title>
+  <link rel="stylesheet" href="/css/read-books-styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>All Books</h1>
+
+    <% if (books.length === 0) { %>
+      <p>No books available at the moment.</p>
+    <% } else { %>
+      <div class="books-list">
+        <% books.forEach(book => { %>
+          <div class="book-item">
+            <div class="book-info">
+              <h2><%= book.bookName %></h2>
+              <p><%= book.description %></p>
+
+              <!-- Display all images for the book -->
+              <div class="book-images">
+                <% book.images.forEach(image => { %>
+                  <div class="book-image">
+                    <img src="<%= image.imagePath %>" alt="<%= book.bookName %> - Image">
+                  </div>
+                <% }); %>
+              </div>
+
+              <!-- Check if the user has reviewed the book -->
+              <% if (book.reviews.length > 0) { %>
+                <div class="review">
+                  <h3>Your Review:</h3>
+                  <p><%= book.reviews[0].review %></p>
+                </div>
+              <% } else { %>
+                <div class="review">
+                  <p>You haven't reviewed this book yet.</p>
+                  <form action="/reviews/<%= book.id %>/<%= book.rents[0].id %>" method="POST">
+                    <textarea name="review" placeholder="Write your review here..." required></textarea>
+                    <button type="submit">Submit Review</button>
+                  </form>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    <% } %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Book</title>
+  <link rel="stylesheet" href="/css/add-book-styles.css">
+</head>
+<body>
+  <div class="add-book-form">
+    <h1>Add New Book</h1>
+    <form action="/admin/addbook" method="POST" enctype="multipart/form-data">
+      <!-- Book Name Input -->
+      <div class="form-group">
+        <label for="bookName">Book Name:</label>
+        <input type="text" id="bookName" name="bookName" required>
+      </div>
+      
+      <!-- Book Images Input -->
+      <div class="form-group">
+        <label for="bookImages">Book Images (Select multiple):</label>
+        <input type="file" id="bookImages" name="bookImages" accept="image/*" multiple required>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Add Book</button>
+    </form>
+  </div>
+</body>
+</html>

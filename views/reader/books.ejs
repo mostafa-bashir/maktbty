@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books List</title>
+  <link rel="stylesheet" href="/css/books-styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <!-- Header Buttons -->
+      <button onclick="window.location.href='/reviews'" class="header-button">My Reviews</button>
+      <button onclick="window.location.href='/old-books'" class="header-button">Books I've Read</button>
+
+      <!-- Logout Button -->
+      <button onclick="window.location.href='/logout'" class="header-button logout-button">Logout</button>
+    </div>
+
+    <h1>Books List</h1>
+
+    <div class="book-list">
+      <% books.forEach(book => { %>
+        <div class="book-item">
+          <div class="book-info">
+            <h2 class="book-name"><%= book.bookName %></h2>
+            <div class="book-images">
+              <% if (book.images && book.images.length > 0) { %>
+                <% book.images.forEach(image => { %>
+                  <img src="<%= image.imagePath %>" alt="Book Image" class="book-image">
+                <% }) %>
+              <% } else { %>
+                <p>No images available.</p>
+              <% } %>
+            </div>
+          </div>
+          <a href="/books/<%= book.id %>/rent" class="rent-button rent-form">Rent</a>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</body>
+</html>

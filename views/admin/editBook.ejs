@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="/css/edit-book-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Book</h1>
+        <form action="/admin/edit/<%= book.id %>" method="POST" enctype="multipart/form-data">
+            <!-- Book Name -->
+            <label for="bookName">Book Name:</label>
+            <input type="text" id="bookName" name="bookName" value="<%= book.bookName %>">
+        
+            <!-- Existing Images -->
+            <label>Existing Images:</label>
+            <div class="image-preview">
+                <% if (book.Images && book.Images.length > 0) { %>
+                    <% book.Images.forEach((image) => { %>
+                        <div>
+                            <img src="<%= image.imagePath %>" alt="Book Image" width="100">
+                            <label>
+                                <input type="checkbox" name="deletedImages" value="<%= image.id %>">
+                                Delete
+                            </label>
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <p>No images available.</p>
+                <% } %>
+            </div>
+        
+            <!-- Upload New Images -->
+            <label for="newImages">Upload New Images:</label>
+            <input type="file" id="newImages" name="newImages" multiple>
+        
+            <!-- Submit Button -->
+            <button type="submit">Save Changes</button>
+        </form>
+        
+        
+    </div>
+    <script>
+        // Example JS to handle image deletion dynamically
+        document.querySelectorAll('.delete-image').forEach(button => {
+            button.addEventListener('click', (event) => {
+                const index = event.target.getAttribute('data-index');
+                alert(`Delete image at index ${index}. Implement this functionality in the backend.`);
+            });
+        });
+    </script>
+</body>
+</html>

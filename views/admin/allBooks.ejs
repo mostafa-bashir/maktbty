@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+  <link rel="stylesheet" href="/css/all-books.css">
+</head>
+<body>
+  <div class="header">
+    <!-- Logout Button -->
+    <div class="logout-button">
+      <a href="/admin/logout" class="button">Logout</a>
+    </div>
+  </div>
+
+  <div class="book-list">
+    <h1>Books</h1>
+    
+    <!-- Add Book Button -->
+    <div class="add-book-button">
+      <a href="/admin/addbook" class="button">Add New Book</a>
+    </div>
+
+    <% books.forEach(book => { %>
+      <div class="book-item">
+        <div class="book-info">
+          <div class="book-name"><%= book.bookName %></div>
+          <div class="book-status">
+            Status: 
+            <% if (book.availability.status === 'Taken') { %>
+              Taken by <%= book.availability.reader %>
+            <% } else { %>
+              Available
+            <% } %>
+          </div>
+        </div>
+        <a href="/admin/book/<%= book.id %>" class="details-button">Details</a>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Details</title>
+  <link rel="stylesheet" href="/css/one-book-styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1><%= book.bookName %></h1>
+    
+    <div class="images-section">
+      <h2>Images</h2>
+      <% if (book.images && book.images.length > 0) { %>
+        <% book.images.forEach(image => { %>
+          <img src="<%= image.imagePath %>" alt="Book Image" class="book-image">
+        <% }) %>
+      <% } else { %>
+        <p>No images available for this book.</p>
+      <% } %>
+    </div>
+    
+    <div class="reviews-section">
+      <h2>Reviews</h2>
+      <% if (book.reviews && book.reviews.length > 0) { %>
+        <ul>
+          <% book.reviews.forEach(review => { %>
+            <li>
+              <strong><%= review.reader.name %>:</strong> <%= review.review %>
+            </li>
+          <% }) %>
+        </ul>
+      <% } else { %>
+        <p>No reviews available for this book.</p>
+      <% } %>
+    </div>
+    
+    <div class="actions">
+        <a href="/admin/edit/<%= book.id %>" class="edit-button edit-form">Edit Book</a>
+      <form action="/admin/delete/<%= book.id %>" method="POST" class="delete-form">
+        <button type="submit" class="delete-button">Delete Book</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

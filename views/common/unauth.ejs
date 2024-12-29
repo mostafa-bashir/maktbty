@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unauthorized Access</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        background: #ffffff;
+        padding: 30px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+      }
+
+      .error-content img {
+        width: 150px;
+        margin-bottom: 20px;
+      }
+
+      .error-content h1 {
+        font-size: 2.5em;
+        color: #ff4d4f;
+        margin-bottom: 20px;
+      }
+
+      .error-content p {
+        font-size: 1.1em;
+        color: #555555;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="error-content">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAKcArwMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABAcFBgIDCAH/xABMEAABAwMABgYDCwgIBwEAAAABAAIDBAURBhIhMUFRBxNhcYGRFBUiIzIzQlJUk5ShsdJDVXKSssHR0xc1U2JzgqLwJDQ3RHSE8Rb/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAgMEAQUG/8QAMhEAAgEDAgQDBgUFAAAAAAAAAAECAwQRBRITITFRQYHBImFxobHRFDKR4fAGIyQzUv/aAAwDAQACEQMRAD8AvFERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBFBdcWi4Cl6txb7103xWyEZDO8jb5c1OQBERAEREAREQBERAEREARFjqwy1lT6DBI+KNoDqiVhw7B3MaeBODk7wN2CQQB21F0pIJTC6UvmGNaKFjpXtzza0EgdpXWbq35lXY5+jn7t6lU1NDSRCKmjbHGNzWjA713ICBT3einmbAJTHO73sU8bonu7mvAJ8FPXTVUsFZC6GqiZNE7ex7QQVj6QzW2rjoZ5JJqaXPos0jtZ7SBkxvJ2u2AkOO0gHO0ZcBlkREARQ5LhE04aHPPZsXFlyjJw9jm9u9T4cuxHfHuQzaa51G+lNfBh5LjIaU6+vnW186+8HBHLAWYYCGAOOTjacYyjHte0OaQQeIUG5XH0UiGnjE1S5usGF2Gsbu1nHgM7uJ243EiOHnBLJOc5rBlxAHMqJJc6ZhxrZKwE9K+sdrXGokqCfyYJZG3sDQdo/SJXEWq3Af1fSfQN/gtEaHcpdTsZ4XSM7RG4jnldsdwgecElveFrT7RQOOWUrIXfLg9ycPFuCup8lTbPbme6qovjPI91hHM4983wyO3hJ0YnOIzdAQRkEEHiF9WDo6wxBrmOD4nbdhyCOYWZikbKwPYcgrPOm4FsZKRzRFwlkZEwukcGjmThQJHVO975RBC7VdjWe/GdUdnadvkuPoFK74WJsp+VKNc/audMCTJK5pbruyA4YOAAP4+a70BDfRCIa1E7qHjc0fBnsLdw7xgpbI5WwySVDNSaWV73tznjhu39ENUxEAREQBRblTuqaRzI8CVpD4ydwe05HhkKUiAgijfP7VbM92fycTixg7Nm13icdgX31Rbd/q+kzz6lufuU1EBqvoVJxpYD3xhfDTuiy6kdqnf1bjlh7P7vh5FSEXo4Mgpbm2nikqHazY4weuYRtbgZIxz5c8hcixzGAy4M83uszgcjWO4DsaMAd3MlQq2mklkjfAQMvYJgfjMa7W89mO4nsUtQ2LduJbuWAiIrCIREQEGijNHUPo2j/AIdwMlOPkD4zO4EgjsONwWTp68UxcwOYSfil3FR5YIZwBPFHIAcgPaHYPiuApKYDApoQDw6sKLjlYZ1PBkXXCc/JA7l1Q1D45OsfiV+ffSbSO7l4LH+rqQbYoRC473QExk9+rjPiuLpZqMg1L+tpzsMxADo+12NhHaMY4jGSo7I9ju59zP8ArWNsZdJG/I4MGsSvvrRnzOu+ruWMUygqzGRHIfYO48lVUo8sxJxqeDO/1m35pW/V3L76zb80rfq7lORZi4gi5tz/AMpW/V3Ll6wb82q/oHKYiAh+sG/Nqv6By+ivaf8At6od8DlLRARPTm/2FT9C5fRWtP5Cp+hcpSIDXERF6RkNK0q6SLVYamSjp4319ZGcPZG4NZGeTnc+wArVWdMVf1mX2WmMedwqHA479X9ymV/RLLV3+oqRdWMoJ5nSkdWTK3WJJA4bzv8AsWWk6JtHHU/VxyVzJcfDdfk57iMfYqHxWWewjJ6KaeWjSST0aMvpK3GRTz4y79E7nff2Lal5v0p0ertE7w2mmlyfhaapj9nWAO8ciCru0Bv7tI9G4KyYt9KjJhqMfLbxx2gg+K7Tm28PqclHHNGxIiK4gEREAXxwDgWuAIIwQeIX1EBEt2Y2y0zjk079VpJ3sIy37Dj/AClS10SU+ZXSxTOjkc0NdgAh2M4zkdp5L4TVs+LDMOwlh8tv3hcBnaOtjMbWSu1XDZk8VNBBGQchar6Y1vw0U8XezWHm3IXfS1rHZNLUsfjf1bwfNUSop80y1VMdTZEWLiuTxslaHDmNimRVkMu54B5O2KiVOUfAsU0yQiIoEgiIgMVm7/my2/Xn/wAlahpp0iO0OrqakuNiimkqIjK009XkAA4260YVgTzRU0Mk08jY4o2lz3vOA0DeSV5v6XtKLZpTfaOezySSw00DonSPjLQ4l2ctzwXUcLp0R0lq9KbLHdaG0UsML3vYGTVZDstODujI4LM611/N9v8Arj/5Sp/o16SrHoxorDa7jHWuqGSyPJhiDm4c4kbchbR/TXot/Y3L6Bv4k5jkYLp+ZUG12eWqpaaJzal7WuimLyQWZI2sbgbB5Ll0ASVfqi8Mp4IJWCqafdZizBLBuw08gsB0saeWjS+3W+ntbKpr6eoMj+vjDRgtI2YJ5qT0J6XWjR8Vluus7oJK6pYYZCzLN2rhx4bfBAXYDceNDRfWnfy0zcPmVF9ad/LU9Fw6Qga7jR0f1h38tfQa3jSUv1h34FjtLdJIdHbdJUOjMswaNRgBwSTgZI3cfIrEWDpIs91fFDOJKSokIaA722Fx4Bw/eAtFO1r1KbqQjlL+dCqVanGW1vDNpzWfNaX6c/gTNZ81pvpz+BS0WctImaz5rTfTn8CZrPmtN9OfwKWtP0l6Q7RY6iSkiD66sjOHxQe9YeTncD2K2lSqVpbYLLIznGCzJmy5rPm1N9OfwLqnp5KnBnt9FIRuL5CSO72FXB6XakOybMwM5dc4nz1f3LY9G+ki0XmeOmna6iqHnDescHMceQdz7wFqqaZdU47nH5plMbqjJ4TM+aStbtg9y/8Abc/P67DjwwpFG24a5FcKQsxsMWtnxypqhXe60Nmo3VdyqY6eFvxnneeQG8nsCwpNvCL3hdSairW4dLdK15bbLZPO35czurB8MH9yhxdL0rXj0mzt1OJbMRj/AEkL0I6VdyWdvzX3M7u6KeMlrIta0Z01tOkLhFBIYKojPUS4Bd+idxWyrFVpTpS21Fhl8JxmsxeTVOlUlvR7fMHGafGzkXAFeXF6i6Vv+nl7/wAAftBeXVBHWERF04Fwl+Cf+iVzXCX4J/6JQHsOxOLrJb3OJJNNGSTx9kKadxyoNg/qO3f+LF+wFE0tuUdus8zpfevYdYDfqAe13Z96DzcEjFykorqzraSyyrOke8esLoIGOzG3Ehx2j2B+r7Xe8p0WWT1npOK6RnuFvZrk/KkPvR4bT5LU62qkqZ56uoOZJHmR5HMnJV26AWuPRvRKOSte2KSUGqqXuOA3I3E8g0AL6y/asrGNvHq+X3PGt83Fw6j6I2xFiG6U2Bzg1t5oSScACdu37Vlju5L5SdOcPzLB7KkpdGaN0naQz262mkoJzFLMQx8jDhwB2kA8Nm87xlvPIqGkp5KqqhpaZhfNM8MYxoyST/vK2rpIq/SLnStzkGD0g98jiR5NDB4BOiembU6ZiRzQfRqZ72k8CcN+5y+ssYqz07jJe0039jxbhuvdbG+SMxF0c0gp2R1dbW01VJhrHyRM6ovO4bCeO7JGVoF4tlTarlUUdS0NqYHarsHY4bx4EEEd69H1dOyqppYJMhsjS0kHaM8R2qm+k5hkuNtr3gNkqqFhkA4PGc/eB4LNpOoVq9d0q0s56e5l17bU6dPfBYwbj0Y6Qz3ewSU0r+srKMANMrvftI9nWO/YRglYHpCsFZcKYXxlRNUvpx1dXTybPRjx1WjcNozvyMHJG1YnolqzS6W+j5wypie3V8NYfslXHNb6WepZUSxa0jcb3HBxuyNxxwzuzsWO7k7C/wCJTXvx9fmXUUri32yZUdj6P6isp2z17qpgd+TghGf1nkDyz3ruvPR8yGhqKi01s0stMzXlpamLUk1eYPHcew43q31remd4pbJFDUzSME+pK1kefakBZuA5a2plRp6ve1Ky2vOX0wdlZW8abyvMoZj30szKimc5j2uDstOCDwcO0L0Xo3cXXaxUNc8APmhBeBu1tx+3K86GJ8oEMLC+SQiNjW73OOwAduV6K0Yt77VYKCilx1kMID8bg7eftK9D+oVBRgvHPy8fQzabuy+xz0itUd8sVfa5XarKuB0Wt8kkbD4HavJl0t1ZaLhPb7jCYaqB2rI0/eOYO8HkvYiwOlGh9j0pia270TZJGDEc7CWSMHY4cOw7F8wj1zyeiv8Ad0IaOFxLa+6NHAdZGcf6F8/oP0e/OF0/Xj/AmTmCgVmNE9HarSm+U9rpGOLXkGeQboos+04+G7mcK6I+hHRtrwZKy6SN4tMrBnxDcredHtHLTo5Rmks9FHTxkgvIyXPPNzjtPimRgyUUbYomxxtDWMaGtA4AblVHSpeeuqBQxP8AZJII/utJH2vDs/4bDxVn3OeSCje6EgSuLY4yRkNc9waCewEgrz/pFI6S+VwcSRFM6FmeDWHVaPIBezoVuqtzvfSPPz8DDqFVwpbV4knQuzevtJaSje3Wp4z19RndqNO7xOB5q0ekV2LJX5e9rY6MjDZC0Evka0ZAO3YD5lVToxpPcdGn1L6Gmp3vqCNZ8rS4gDOAMOGzblTLxprd73BUwVsVKyOdkbHdWwg+w4uGPaPEr1LqzuLm8hUx7Ca/cyUa9KlQcc82a/SNDa6kwXfDD4xXpSteYqKokG9kbneQXmjXfHLDLG0OMb9bGewq0tDtNbtpPc57ZXRUscbqaQ+5RkHONm3WPNQ1u1nUSnFco5+i+xLT60Y+y+rNV6RWiPSV0Y3MpoWgchqBZPoZGdJa88qUj7WKF0lRn15TVPxamhhkBx2EfuCkdDsoj0rqoyR7rTOAHaCw/uKuq+1pMcf8+hCHK9ee5dCp3pQxm2Y+KalvgJSFcSpfpNlDqq3Rg/k5psdj5XEH7F4miL/Nj5/Q33/+hmK6PMjTm2EE7S4Y/wAjlfg3BUV0YwOn04pCBshifIdn91w+8hXsrdeadyku3qyGnL+15+iK56U6qtkoHQUs1QwNrGx9XE0bQI9cknGd72jfwVUVDJIHuknjmdK4AEvB1j5r0gbcwSSPjnqIzI7XcGSbM/7Cg3O3MnhFHcz6bRVB6smVrdeJx96QQBx2cwSFGw1WNrTVNwz78+h25s3Wlu3eRVnR9eNHLfdGT3GnmhqWjUjnc/XbGTvJGBjO7dsGdvFXYx7Xsa5jg5rhlpByCOxeaLjSmmrKinDgZIJHxh3a0keWxXF0SXKSv0YMUpJ9FlMbCd+oQHAeGSFq1mySj+ITb/ny+BTY18vhNG7oiL5w9QIiIAiIgId1ilmpQ2Bge9ssT9UuxkNka47e4FafU6BW6pqZqiW31ZkmkdI7FY0bScngt8RXUbirRbdOTWexCdOE/wAyyV9/R3a/zbWfXW/wWD0u0UtdqslVU01PUw1UD4hiSYPaWvJHDuVurTdOKCa60lyoaV0Qne2mc1skgYCA5xO9b7TUbjjw4lR7crOX4GetbU+HLbFZwUvCA6ohjIyJJA3ert0X0NorLc5bhDDNC/U1GNfOH7Dvzs7lXMOgt6bXUWykcTNuZUNcdjXHh2BXmtutXqntjRqZXPOH8P3M9hb7U3OPMrHpHtDp7JDUwtzJapXQSgD8kcFh8BqeZVf6OXd1h0gpLgAXNY72mj4zdocO/B2dyv240rtd1RHCJ2vj6qopzj3Vm3dniMnvBI5Yq2+9HkkzpajRt7Kyl1ttM92rLCfknW5duD3713S7+k6H4au8ds9MPqvccu7eaqcWmWBPptYI7VJXMudO4tjLmwl+JHHGxurvyTs3KmNIbl60uRmaXGKONkMWsNpYwYBPadp8V2//AI6/NlDfU1YXjcerJA8dyzOjugFwulWz0xzYaRrvdnRyBxAG9oIyNY95xx4A67ajZac5VnUTfhzTKas7i5xDbgz3Q1Z3Mjrb3K3AmPUQEje1p9o+Yx4Lt0v6S20Fb6JZGsnEMg6+odtYcb2t58i7/wCre32uAWgW2laKaBsYjjawbGtG4Y4jgRxGVpelWiVHeZutc5lqumxuXfAVHLB5/bzB2FeNSuaFe8dW56P9PP3G6dKpToKFLqZSydIdiuMDDU1AopyBrRze9z2O3EeSjaWadWakpY46KqjrarrGyNjhdkDVOsC47gMgDmq6rtAtIKGRw9Vvlb8umIeHeA2+YUaLRK+BjiLTNDG3a50wETR2kuIC9OOl2Dlv4i29tyMru7lLbt5/AxU0r5pZJpXZfI4uceZJyVcvRJbZaHRRk07S19ZIZwCNzcAN+7PitY0T6O5qmsiqbwYzRMOs6IA+7cm5O9vM7iNxOdltsaGNDWgAAYAG4KjWdRp1oqjReV4v0J2NtODc59T6iIvnj0wiIgCIiAIiIAuuSCGU60kUbzuy5oK7EQHVHTwRu1o4Y2O5taAu1EQBR6ihpKl4fPTxPe33ry0aw7jvCkIgIRtVC7ZLAJRymcZB5OJUxrQ0ANAAAwAOC+ogC4vY17S17Q5rhggjIIXJEBDFqomfBQCEcoSYx5NIX2K20UUgkbSxGRpyJHN1nDxO1S0QDCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgP/Z" alt="Unauthorized Access" />
+        <h1>403 - Unauthorized</h1>
+        <p>You do not have permission to access this page.</p>
+        <p>Please log in with the appropriate credentials to continue.</p>
+      </div>
+    </div>
+  </body>
+</html>
